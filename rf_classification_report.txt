@@ -1,0 +1,85 @@
+Random Forest Report:
+                                              precision    recall  f1-score   support
+
+                 131020 Unbilled receivables       1.00      1.00      1.00         5
+                  132098 IC Clearing account       0.87      0.87      0.87       141
+ 132098 IC Clearing account - Paid on Behalf       0.62      0.62      0.62        26
+            134001 Prepaid Operating Expense       0.83      0.62      0.71        39
+                    134002 Prepaid Insurance       1.00      0.50      0.67         4
+                 134004 Prepaid Subscription       0.67      0.50      0.57         4
+            141001 Computer Equipment - Cost       1.00      0.86      0.92         7
+              142101 Office Equipment - Cost       1.00      0.25      0.40         4
+                           151100 Trademarks       0.00      0.00      0.00         1
+                                 151101 Cost       1.00      0.33      0.50         3
+                    151101 Trademarks - Cost       0.67      0.80      0.73         5
+                          213005 AP clearing       1.00      1.00      1.00         1
+                     223001 Salaries Payable       1.00      1.00      1.00         6
+                        230051 Lease payable       0.75      1.00      0.86         3
+                  231101 Customer Prepayment       1.00      1.00      1.00         3
+                        232101 Lease payable       1.00      0.83      0.91         6
+                  511102 External Commission       1.00      1.00      1.00         8
+                         511301 Display COGS       1.00      1.00      1.00        12
+               511600 Cost of Sales - Others       1.00      1.00      1.00         1
+                               511601 Others       1.00      0.77      0.87        13
+                   511606 Audience Extension       1.00      1.00      1.00         8
+                 511607 Online Subscriptions       0.00      0.00      0.00         0
+                   611101 Cloud server - AWS       1.00      1.00      1.00         4
+                611103 Cloud server - Google       1.00      1.00      1.00         4
+             611202 Online Subscription/Tool       0.78      0.96      0.86       236
+                     611203 Product Platform       0.75      1.00      0.86         3
+                          612001 Paid Social       0.88      0.74      0.80        19
+                          612002 Paid Search       1.00      1.00      1.00        10
+                          612003 Out of Home       1.00      1.00      1.00         1
+                             612005 Giveaway       1.00      1.00      1.00        13
+              612007 Events/Community meetup       1.00      0.50      0.67         4
+       612009 Agency Commission/Retainer Fee       1.00      1.00      1.00         2
+                               612013 Others       1.00      1.00      1.00         3
+                612014 Marketing Promo Costs       1.00      0.50      0.67         4
+                           612016 Collateral       1.00      0.60      0.75         5
+                             612021 Branding       0.80      1.00      0.89         4
+                         612031 Paid Content       1.00      0.67      0.80         3
+                   612032 Key Opinion Leader       1.00      0.50      0.67         2
+                          612033 Display Ads       1.00      1.00      1.00         1
+                            612036 Video Ads       0.50      0.67      0.57         3
+                                612037 Radio       0.00      0.00      0.00         1
+                   614123 Employee On Record       1.00      1.00      1.00        35
+                                  614302 FWL       0.80      1.00      0.89         4
+                   614304 Insurance expenses       1.00      0.67      0.80         3
+              614306 Other Employee Expenses       1.00      0.56      0.71         9
+                    614336 Employee Training       1.00      0.50      0.67         2
+                    614400 Employee Training       1.00      1.00      1.00         2
+            617101 Customer Support - Others       1.00      1.00      1.00         3
+           617102 Customer Support - Zendesk       1.00      1.00      1.00         1
+             617103 Subcontractors/Outsource       1.00      1.00      1.00        25
+                      617104 Temporary Staff       1.00      0.91      0.95        11
+                            617201 Audit Fee       0.88      1.00      0.93         7
+                       617202 Legal Expenses       0.80      0.67      0.73        12
+                              617203 Tax Fee       0.78      1.00      0.88         7
+                 617204 Secretarial Expenses       1.00      0.67      0.80         3
+                  617205 Consultancy Expense       0.88      0.92      0.90        24
+                          617207 Support Fee       0.94      0.94      0.94        18
+                               617208 Others       1.00      0.50      0.67         2
+                       617303 Recruiter Fees       1.00      0.77      0.87        13
+                           619101 Travelling       1.00      0.80      0.89         5
+                        619102 Accommodation       0.00      0.00      0.00         1
+                       619103 Transportation       0.00      0.00      0.00         1
+                    619201 Equipment Expense       0.77      0.74      0.76        23
+                             619202 Cleaning       1.00      1.00      1.00         5
+                    619203 Supplies/Expenses       0.93      0.91      0.92        45
+              619205 Repairs and Maintenance       0.90      0.82      0.86        11
+                 619206 Telephone & Internet       1.00      0.89      0.94         9
+                            619207 Utilities       0.89      1.00      0.94        17
+                            619208 Insurance       0.00      0.00      0.00         1
+                               619209 Others       1.00      0.85      0.92        20
+                         619210 Subscription       0.67      0.67      0.67         3
+                         619502 Bank Charges       1.00      1.00      1.00         4
+                 619505 User testing expense       1.00      0.67      0.80         3
+                        619512 Meals (staff)       0.00      0.00      0.00         1
+       619513 Team Bonding (Staff-HR Budget)       0.00      0.00      0.00         1
+                           619515 Engagement       1.00      0.50      0.67        12
+                  619518 Courier and postage       0.92      1.00      0.96        11
+620107 Gain/loss on disposal of Fixed Assets       0.00      0.00      0.00         0
+
+                                    accuracy                           0.86       976
+                                   macro avg       0.82      0.73      0.76       976
+                                weighted avg       0.87      0.86      0.86       976
