@@ -1,86 +1,86 @@
-Logistic Regression Report:
+LinearSVC (Final Model) Report:
                                               precision    recall  f1-score   support
 
                  131020 Unbilled receivables       1.00      1.00      1.00         5
-                  132098 IC Clearing account       0.78      0.46      0.58       141
- 132098 IC Clearing account - Paid on Behalf       0.53      0.38      0.44        26
-            134001 Prepaid Operating Expense       0.69      0.69      0.69        39
-                    134002 Prepaid Insurance       1.00      0.75      0.86         4
-                 134004 Prepaid Subscription       0.33      0.50      0.40         4
-            141001 Computer Equipment - Cost       0.75      0.86      0.80         7
+                  132098 IC Clearing account       0.94      0.92      0.93       141
+ 132098 IC Clearing account - Paid on Behalf       0.74      0.88      0.81        26
+            134001 Prepaid Operating Expense       0.77      0.77      0.77        39
+                    134002 Prepaid Insurance       1.00      0.50      0.67         4
+                 134004 Prepaid Subscription       0.67      0.50      0.57         4
+            141001 Computer Equipment - Cost       0.86      0.86      0.86         7
               142101 Office Equipment - Cost       1.00      1.00      1.00         4
                            151100 Trademarks       0.00      0.00      0.00         1
                                  151101 Cost       1.00      0.33      0.50         3
-                    151101 Trademarks - Cost       0.67      0.80      0.73         5
+                    151101 Trademarks - Cost       1.00      0.80      0.89         5
                           213005 AP clearing       1.00      1.00      1.00         1
                   222003 Customer Prepayment       0.00      0.00      0.00         0
                      223001 Salaries Payable       1.00      1.00      1.00         6
-                        230051 Lease payable       0.75      1.00      0.86         3
+                        230051 Lease payable       1.00      1.00      1.00         3
                   231101 Customer Prepayment       1.00      0.67      0.80         3
-                        232101 Lease payable       1.00      0.83      0.91         6
+                        232101 Lease payable       1.00      1.00      1.00         6
                   511102 External Commission       1.00      1.00      1.00         8
-                         511301 Display COGS       0.67      1.00      0.80        12
+                         511301 Display COGS       1.00      1.00      1.00        12
                511600 Cost of Sales - Others       1.00      1.00      1.00         1
-                               511601 Others       1.00      0.85      0.92        13
-                   511606 Audience Extension       0.64      0.88      0.74         8
+                               511601 Others       1.00      0.92      0.96        13
+                   511606 Audience Extension       1.00      1.00      1.00         8
                  511607 Online Subscriptions       0.00      0.00      0.00         0
                    611101 Cloud server - AWS       1.00      1.00      1.00         4
-                611103 Cloud server - Google       0.80      1.00      0.89         4
-             611202 Online Subscription/Tool       0.89      0.87      0.88       236
-                     611203 Product Platform       0.43      1.00      0.60         3
-                          612001 Paid Social       0.41      1.00      0.58        19
-                          612002 Paid Search       0.30      1.00      0.47        10
+                611103 Cloud server - Google       1.00      1.00      1.00         4
+             611202 Online Subscription/Tool       0.95      0.94      0.95       236
+                     611203 Product Platform       0.75      1.00      0.86         3
+                          612001 Paid Social       0.94      0.84      0.89        19
+                          612002 Paid Search       0.91      1.00      0.95        10
                           612003 Out of Home       1.00      1.00      1.00         1
-                             612005 Giveaway       0.81      1.00      0.90        13
-              612007 Events/Community meetup       1.00      0.75      0.86         4
+                             612005 Giveaway       0.93      1.00      0.96        13
+              612007 Events/Community meetup       0.80      1.00      0.89         4
        612009 Agency Commission/Retainer Fee       1.00      1.00      1.00         2
                                612013 Others       1.00      1.00      1.00         3
-                612014 Marketing Promo Costs       0.80      1.00      0.89         4
+                612014 Marketing Promo Costs       1.00      1.00      1.00         4
                            612016 Collateral       1.00      0.80      0.89         5
                              612021 Branding       1.00      1.00      1.00         4
                          612031 Paid Content       1.00      1.00      1.00         3
-                   612032 Key Opinion Leader       0.50      0.50      0.50         2
+                   612032 Key Opinion Leader       0.67      1.00      0.80         2
                           612033 Display Ads       1.00      1.00      1.00         1
-                            612036 Video Ads       0.40      0.67      0.50         3
+                            612036 Video Ads       0.60      1.00      0.75         3
                                 612037 Radio       1.00      1.00      1.00         1
                    614123 Employee On Record       1.00      1.00      1.00        35
                                   614302 FWL       1.00      1.00      1.00         4
-                   614304 Insurance expenses       0.50      0.67      0.57         3
-              614306 Other Employee Expenses       0.78      0.78      0.78         9
+                   614304 Insurance expenses       0.75      1.00      0.86         3
+              614306 Other Employee Expenses       0.88      0.78      0.82         9
                     614336 Employee Training       1.00      1.00      1.00         2
                     614400 Employee Training       1.00      1.00      1.00         2
             617101 Customer Support - Others       1.00      1.00      1.00         3
            617102 Customer Support - Zendesk       1.00      1.00      1.00         1
              617103 Subcontractors/Outsource       1.00      1.00      1.00        25
                       617104 Temporary Staff       0.85      1.00      0.92        11
-                            617201 Audit Fee       0.70      1.00      0.82         7
-                       617202 Legal Expenses       1.00      0.75      0.86        12
-                              617203 Tax Fee       0.88      1.00      0.93         7
+                            617201 Audit Fee       1.00      1.00      1.00         7
+                       617202 Legal Expenses       0.91      0.83      0.87        12
+                              617203 Tax Fee       0.78      1.00      0.88         7
                  617204 Secretarial Expenses       1.00      0.67      0.80         3
-                  617205 Consultancy Expense       0.83      1.00      0.91        24
-                          617207 Support Fee       1.00      1.00      1.00        18
+                  617205 Consultancy Expense       0.86      1.00      0.92        24
+                          617207 Support Fee       1.00      0.83      0.91        18
                                617208 Others       1.00      0.50      0.67         2
-                       617303 Recruiter Fees       1.00      1.00      1.00        13
+                       617303 Recruiter Fees       1.00      0.92      0.96        13
                            619101 Travelling       0.83      1.00      0.91         5
                         619102 Accommodation       1.00      1.00      1.00         1
                        619103 Transportation       0.00      0.00      0.00         1
-                    619201 Equipment Expense       0.83      0.83      0.83        23
+                    619201 Equipment Expense       0.88      0.91      0.89        23
                              619202 Cleaning       1.00      1.00      1.00         5
-                    619203 Supplies/Expenses       0.97      0.80      0.88        45
+                    619203 Supplies/Expenses       0.98      0.93      0.95        45
               619205 Repairs and Maintenance       0.91      0.91      0.91        11
                  619206 Telephone & Internet       1.00      0.89      0.94         9
-                            619207 Utilities       1.00      0.76      0.87        17
-                            619208 Insurance       1.00      1.00      1.00         1
-                               619209 Others       0.80      0.80      0.80        20
-                         619210 Subscription       0.60      1.00      0.75         3
+                            619207 Utilities       0.94      1.00      0.97        17
+                            619208 Insurance       0.50      1.00      0.67         1
+                               619209 Others       1.00      0.90      0.95        20
+                         619210 Subscription       0.75      1.00      0.86         3
                          619502 Bank Charges       1.00      1.00      1.00         4
                  619505 User testing expense       1.00      1.00      1.00         3
-                        619512 Meals (staff)       0.33      1.00      0.50         1
+                        619512 Meals (staff)       0.00      0.00      0.00         1
        619513 Team Bonding (Staff-HR Budget)       0.00      0.00      0.00         1
-                           619515 Engagement       0.77      0.83      0.80        12
+                           619515 Engagement       0.83      0.83      0.83        12
                   619518 Courier and postage       0.92      1.00      0.96        11
 620107 Gain/loss on disposal of Fixed Assets       0.00      0.00      0.00         0
 
-                                    accuracy                           0.81       976
-                                   macro avg       0.79      0.82      0.79       976
-                                weighted avg       0.84      0.81      0.81       976
+                                    accuracy                           0.92       976
+                                   macro avg       0.85      0.84      0.84       976
+                                weighted avg       0.93      0.92      0.92       976
