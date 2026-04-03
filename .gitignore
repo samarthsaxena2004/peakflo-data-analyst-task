@@ -1,3 +1,12 @@
+# Node
+node_modules/
+package-lock.json
+package.json
+
+# Internal setup scripts
+intern_commits.sh
+setup_repo.sh
+
 # Python virtual environment
 venv/
 env/

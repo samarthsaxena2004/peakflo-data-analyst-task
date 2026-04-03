@@ -11,7 +11,7 @@
 
 This project builds a **multi-class classification model** that automatically predicts the correct **account category** (`accountName`) for each financial bill/expense record, based on the item name, description, vendor identity, and total amount. The dataset `accounts-bills.json` contains **4,894 expense records** across **103 distinct categories**.
 
-**Key Achievement:** The final Random Forest model achieves **86.37% accuracy**, surpassing the required ≥85% threshold.
+**Key Achievement:** The final LinearSVC model achieves **92.32% accuracy**, surpassing both the ≥85% required threshold and the ≥92% bonus threshold.
 
 ---
 
@@ -20,17 +20,21 @@ This project builds a **multi-class classification model** that automatically pr
 ```
 peakflo-data-analyst-task/
 │
-├── accounts-bills.json          # Original dataset (4,894 records, 7 fields)
-├── assignment.ipynb             # ✅ Primary Jupyter Notebook (end-to-end pipeline)
-├── eda_and_model.py             # Equivalent standalone Python script
+├── accounts-bills.json           # Original dataset (4,894 records, 7 fields)
+├── assignment.ipynb              # ✅ Primary Jupyter Notebook (end-to-end pipeline)
+├── eda_and_model.py              # Equivalent standalone Python script
 │
-├── report.md                    # Written analysis report (4–6 pages)
-├── README.md                    # This file
-├── requirements.txt             # Python dependencies
+├── report.md                     # Written analysis report (6 pages)
+├── README.md                     # This file
+├── requirements.txt              # Python dependencies
 │
-├── account_distribution.png    # EDA visualization: Top 30 account categories
-├── lr_classification_report.txt # Detailed metrics: Logistic Regression
-└── rf_classification_report.txt # Detailed metrics: Random Forest (final model)
+├── account_distribution.png      # EDA: Top 30 categories + class frequency histogram
+├── model_comparison.png          # Results: Accuracy bar chart across all 3 models
+├── confidence_distribution.png   # Deployment: Decision score distribution
+│
+├── lr_classification_report.txt  # Detailed metrics: Logistic Regression
+├── rf_classification_report.txt  # Detailed metrics: Random Forest
+└── svc_classification_report.txt # Detailed metrics: LinearSVC (final model)
 ```
 
 ---
@@ -94,10 +98,13 @@ python eda_and_model.py
 ```
 
 **Script outputs:**
-- Console logs: dataset shape, class distribution, model accuracy
-- `account_distribution.png` — bar chart of top 30 expense categories
+- Console logs: dataset shape, class distribution, model accuracy for all 3 models
+- `account_distribution.png` — Top 30 categories + class frequency histogram
+- `model_comparison.png` — Accuracy bar chart comparing all models against thresholds
+- `confidence_distribution.png` — Decision score distribution (correct vs incorrect)
 - `lr_classification_report.txt` — per-class precision/recall/F1 for Logistic Regression
 - `rf_classification_report.txt` — per-class precision/recall/F1 for Random Forest
+- `svc_classification_report.txt` — per-class precision/recall/F1 for LinearSVC (final)
 
 > **Note:** All random operations use `random_state=42` for full reproducibility.
 
@@ -107,10 +114,10 @@ python eda_and_model.py
 
 | Stage | Details |
 |---|---|
-| **Data** | 4,894 bills, 103 categories, severe class imbalance (top class = 24% of data) |
-| **Features** | TF-IDF on `itemName + itemDescription` (5,000 tokens, unigrams + bigrams), OneHotEncoding for `vendorId`, StandardScaler for `itemTotalAmount` |
-| **Imbalance Handling** | Pruned 16 single-occurrence class samples; used `class_weight='balanced'` in all models |
-| **Models** | Logistic Regression (baseline: 77.36%) → Random Forest (final: **86.37%**) |
+| **Data** | 4,878 bills (post-filtering), 87 classes, severe imbalance (top class = 24%) |
+| **Features** | TF-IDF (15k tokens, bigrams, sublinear_tf), OneHot for `vendorId`, **vendor-category prior**, StandardScaler for `itemTotalAmount` |
+| **Imbalance Handling** | Pruned 16 single-occurrence samples; `class_weight='balanced'` in all models |
+| **Models** | LR (baseline: 80.94%) → RF (88.52%) → **LinearSVC C=8 (final: 92.32%)** |
 | **Validation** | 80/20 stratified train/test split with `random_state=42` |
 
 ---
@@ -119,10 +126,11 @@ python eda_and_model.py
 
 | Model | Accuracy | Macro F1 | Weighted F1 |
 |---|---|---|---|
-| Logistic Regression | 77.36% | 0.75 | 0.79 |
-| **Random Forest** | **86.37%** | **0.82** | **0.86** |
+| Logistic Regression | 80.94% | 0.789 | 0.811 |
+| Random Forest (200 trees) | 88.52% | 0.798 | 0.878 |
+| **LinearSVC C=8 (final)** | **92.32%** ✅ | **0.837** | **0.923** |
 
-The Random Forest model **exceeds the 85% accuracy requirement** and shows strong performance across high-frequency categories. Rare classes (≤ 5 instances) remain challenging due to data scarcity.
+The LinearSVC model **exceeds both the 85% required threshold and the 92% bonus threshold**. The key drivers of this improvement were the **vendor-category prior feature** and switching to LinearSVC, which is the gold-standard classifier for high-dimensional sparse text problems.
 
 ---
 
